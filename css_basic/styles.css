@@ -8,3 +8,41 @@ p {
   color: #333;
   font-size: 16px;
 }
+
+/* Make <body> a flex container in column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default spacing */
+}
+
+/* Make <main> a flex container in row direction */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* Allow it to grow and take available space */
+}
+
+/* <article> takes 2/3 of space */
+article {
+  flex: 2;
+  overflow-y: auto; /* Scroll if content overflows vertically */
+  padding: 1rem;
+  background-color: #f9f9f9; /* Optional for clarity */
+}
+
+/* <aside> takes 1/3 of space */
+aside {
+  flex: 1;
+  overflow-y: auto; /* Scroll if content overflows vertically */
+  padding: 1rem;
+  background-color: #e9e9e9; /* Optional for clarity */
+}
+
+/* Optional: header and footer styles */
+header, footer {
+  background-color: #ddd;
+  padding: 1rem;
+  text-align: center;
+}
